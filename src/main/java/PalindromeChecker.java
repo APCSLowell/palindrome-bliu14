@@ -45,7 +45,6 @@ public boolean palindrome(String sWord)
     return true;
   }
   return false;
-  return false;
 }
 public String reverse(String sWord)
 {
