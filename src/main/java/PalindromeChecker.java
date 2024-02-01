@@ -39,9 +39,11 @@ public boolean palindrome(String word)
 {
   String s = "";
   String sord = "";
+  String sword = "";
   String sWord = "";
   sord = noSpaces(word);
-  sWord = noCapitals(sord);
+  sword = noCapitals(sord);
+  sWord = onlyLetters(sword);
   for(int i = sWord.length()-1; i >= 0; i--) {
     s+= sWord.charAt(i);
   }
@@ -74,6 +76,15 @@ public String noCapitals(String sWord){
   String s = "";
   for(int i = 0; i < sWord.length(); i++) {
     s += sWord.substring(i,i+1).toLowerCase();
+  }
+  return s;
+}
+public String onlyLetters(String sString){
+  String s = "";
+  for(int i = 0; i < sString.length(); i++) {
+    if(Character.isLetter(sString.charAt(i)) == true) {
+      s += sString.charAt(i);
+    }
   }
   return s;
 }
