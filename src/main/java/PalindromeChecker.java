@@ -35,9 +35,11 @@ public void tester()
     }
   }
 }
-public boolean palindrome(String sWord)
+public boolean palindrome(String word)
 {
   String s = "";
+  sword = reverse(word);
+  sWord = noSpaces(sword);
   for(int i = sWord.length()-1; i >= 0; i--) {
     s+= sWord.charAt(i);
   }
@@ -51,6 +53,25 @@ public String reverse(String sWord)
     String s = "";
   for(int i = sWord.length()-1; i >= 0; i--) {
     s+= sWord.charAt(i);
+  }
+  return s;
+}
+public String noSpaces(String sWord){
+  String s = "";
+  for(int i = 0; i < sWord.length(); i++) {
+    if(sWord.substring(i,i+1).equals(" ")) {
+      
+    }
+    else {
+      s+= sWord.charAt(i);
+    }
+  }
+  return s;
+}
+public String noCapitals(String sWord){
+  String s = "";
+  for(int i = 0; i < sWord.length(); i++) {
+    s += sWord.substring(i,i+1).toLowerCase();
   }
   return s;
 }
