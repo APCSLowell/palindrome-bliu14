@@ -38,6 +38,7 @@ public void tester()
 public boolean palindrome(String word)
 {
   String s = "";
+  String sord = "";
   String sWord = "";
   sord = noSpaces(word);
   sWord = noCapitals(sord);
