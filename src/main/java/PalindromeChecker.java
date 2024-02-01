@@ -38,8 +38,8 @@ public void tester()
 public boolean palindrome(String word)
 {
   String s = "";
-  sword = reverse(word);
-  sWord = noSpaces(sword);
+  sord = noSpaces(word);
+  sWord = noCapitals(sord);
   for(int i = sWord.length()-1; i >= 0; i--) {
     s+= sWord.charAt(i);
   }
